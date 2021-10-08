@@ -1,3 +1,18 @@
+{% extends 'geekshop/base.html' %}
+{% load static %}
+
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'geekshop/style.css' %}">
+	<link rel="stylesheet" href="{% static 'geekshop/fonts/font-awesome/css/font-awesome.css' %}">
+{% endblock %}
+
+{% block content %}
+	{% include 'geekshop/includes/slider.html' %}
+	<div class="featured">
+			<div class="featured-menu">
+					<a class="active" href="#">Популярные</a><a href="#">Новинки</a>
+			</div>
+			<a class="explore" href="#">Показать все <img src="{% static 'geekshop/img/arrow.png' %}" alt=""></a>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,6 +53,9 @@
 			</div>
 			<div class="tab-content">
 				<div class="block">
+					<a href="#"><img src="{% static 'geekshop/img/product-1.jpg' %}" alt="">
+						<div class="text">
+							<img src="{% static 'geekshop/img/icon-hover.png' %}" alt="img">
 					<a href="#"><img src="static/geekshop/img/product-1.jpg" alt="">
 						<div class="text">
 							<img src="static/geekshop/img/icon-hover.png" alt="img">
@@ -47,6 +65,9 @@
 					</a>
 				</div>
 				<div class="block">
+					<a href="#"><img src="{% static 'geekshop/img/product-2.jpg' %}" alt="">
+						<div class="text">
+							<img src="{% static 'geekshop/img/icon-hover.png' %}" alt="">
 					<a href="#"><img src="static/geekshop/img/product-2.jpg" alt="">
 						<div class="text">
 							<img src="static/geekshop/img/icon-hover.png" alt="">
@@ -57,6 +78,7 @@
 				</div>	
 			</div>
 		</div>
+{% endblock %}
 		
 		<div class="clr"></div>
 

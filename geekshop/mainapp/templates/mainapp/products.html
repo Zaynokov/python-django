@@ -1,3 +1,14 @@
+
+{% extends 'geekshop/base.html' %}
+{% load static %}
+
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'geekshop/style.css' %}">
+	<link rel="stylesheet" href="{% static 'geekshop/fonts/font-awesome/css/font-awesome.css' %}">
+{% endblock %}
+
+{% block content %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +36,9 @@
 		<div class="details">
 			<div class="links clearfix">
 				<ul class="links-menu">
+					{% for link in links_menu %}
+					<li><a href="{{ link.href }}" class="active">{{ link.name }}</a></li>
+					{% endfor %}
 					<li><a href="#" class="active">все</a></li>
 					<li><a href="#">дом</a></li>
 					<li><a href="#">офис</a></li>
@@ -36,6 +50,11 @@
 			<div class="details-products">
 				<div class="details-slider">
 					<div class="slider-product">
+						<img src="{% static 'geekshop/img/slider1.jpg' %}">
+					</div>
+					<div class="slider-control">
+						<div class="block">
+							<a href="#"><img src="{% static 'geekshop/img/controll.jpg' %}" alt="">
 						<img src="/static/geekshop/img/slider1.jpg">
 					</div>
 					<div class="slider-control">
@@ -45,11 +64,13 @@
 							</a>
 						</div>
 						<div class="block">
+							<a href="#"><img src="{% static 'geekshop/img/controll1.jpg' %}" alt="">
 							<a href="#"><img src="/static/geekshop/img/controll1.jpg" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
+							<a href="#"><img src="{% static 'geekshop/img/controll2.jpg' %}" alt="">
 							<a href="#"><img src="/static/geekshop/img/controll2.jpg" alt="">
 								<div class="text"></div>
 							</a>
@@ -78,6 +99,13 @@
 			<div class="related">
 				<div class="title clearfix">
 					<h2>Похожие продукты</h2>
+					<a class="explore" href="#">показать все <img src="{% static 'geekshop/img/arrow.png' %}" alt=""></a>
+				</div>
+				<div class="related-products clearfix">
+					<div class="block">
+						<a href="#"><img src="{% static 'geekshop/img/product-11.jpg' %}" alt="">
+							<div class="text">
+								<img src="{% static 'geekshop/img/icon-hover.png' %}" alt="img">
 					<a class="explore" href="#">показать все <img src="/static/geekshop/img/arrow.png" alt=""></a>
 				</div>
 				<div class="related-products clearfix">
@@ -91,6 +119,9 @@
 						</a>
 					</div>
 					<div class="block">
+						<a href="#"><img src="{% static 'geekshop/img/product-21.jpg' %}" alt="">
+							<div class="text">
+								<img src="{% static 'geekshop/img/icon-hover.png' %}" alt="img">
 						<a href="#"><img src="/static/geekshop/img/product-21.jpg" alt="">
 							<div class="text">
 								<img src="/static/geekshop/img/icon-hover.png" alt="img">
@@ -100,6 +131,9 @@
 						</a>
 					</div>
 					<div class="block">
+						<a href="#"><img src="{% static 'geekshop/img/product-31.jpg' %}" alt="">
+							<div class="text">
+								<img src="{% static 'geekshop/img/icon-hover.png' %}" alt="img">
 						<a href="#"><img src="/static/geekshop/img/product-31.jpg" alt="">
 							<div class="text">
 								<img src="/static/geekshop/img/icon-hover.png" alt="img">
@@ -112,6 +146,7 @@
 				</div>
 			</div>
 		</div>
+{% endblock %}
 
 		<div class="clr"></div>
 
