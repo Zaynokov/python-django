@@ -1,11 +1,16 @@
 from django.shortcuts import render
 
+from mainapp.models import Product
+
 
 def main(request):
-    title = 'Главная'
+    title = 'Магазин'
+
+    products = Product.objects.all()
 
     context = {
         'title': title,
+        'products': products,
     }
     return render(request, 'geekshop/index.html', context)
 
@@ -17,8 +22,3 @@ def contacts(request):
         'title': title,
     }
     return render(request, 'geekshop/contact.html', context)
-    return render(request, 'geekshop/index.html')
-
-
-def contacts(request):
-    return render(request, 'geekshop/contact.html')
