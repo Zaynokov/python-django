@@ -33,6 +33,10 @@ class Basket(models.Model):
         default=True,
     )
 
+    @staticmethod
+    def get_items(user):
+        return Basket.objects.filter(user=user)
+
     @property
     def product_cost(self):
         return self.product.price * self.quantity
@@ -48,3 +52,4 @@ class Basket(models.Model):
         _items = Basket.objects.filter(user=self.user)
         _total_cost = sum(list(map(lambda x: x.product_cost, _items)))
         return _total_cost
+
