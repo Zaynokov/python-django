@@ -1,0 +1,30 @@
+[
+  {
+
+      "category": "Дом",
+      "name": "Для дома",
+      "image": "products_images/93fea91a624b924df5739dde82bbe1da_Adr0at7.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "1223.00",
+      "quantity": 123
+  },
+  {
+      "category": "Офис",
+      "name": "Для офиса",
+      "image": "products_images/93fea91a624b924df5739dde82bbe1da_knljYwO.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "35435.00",
+      "quantity": 23
+  },
+  {
+      "category": "Классика",
+      "name": "Классика",
+      "image": "products_images/93fea91a624b924df5739dde82bbe1da_V9g5nDt.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "1234.00",
+      "quantity": 12
+  }
+]
